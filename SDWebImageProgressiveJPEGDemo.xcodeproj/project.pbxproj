@@ -12,9 +12,13 @@
 		802C95651FA0E62F0009362F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802C95631FA0E62F0009362F /* Main.storyboard */; };
 		802C95671FA0E62F0009362F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802C95661FA0E62F0009362F /* Assets.xcassets */; };
 		802C956A1FA0E62F0009362F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802C95681FA0E62F0009362F /* LaunchScreen.storyboard */; };
+		9DD1E374DE903D9E4DFADFB4 /* Pods_SDWebImageProgressiveJPEGDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336DD5F29A500E03EF20F56C /* Pods_SDWebImageProgressiveJPEGDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17DB5F56D2BFC321D2C834D3 /* Pods-SDWebImageProgressiveJPEGDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebImageProgressiveJPEGDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		2EE008FD024A54987AE337AA /* Pods-SDWebImageProgressiveJPEGDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebImageProgressiveJPEGDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo.release.xcconfig"; sourceTree = "<group>"; };
+		336DD5F29A500E03EF20F56C /* Pods_SDWebImageProgressiveJPEGDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDWebImageProgressiveJPEGDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		802C955C1FA0E62F0009362F /* SDWebImageProgressiveJPEGDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDWebImageProgressiveJPEGDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		802C955F1FA0E62F0009362F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		802C95611FA0E62F0009362F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DD1E374DE903D9E4DFADFB4 /* Pods_SDWebImageProgressiveJPEGDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32BE81B512CEE425885D2852 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17DB5F56D2BFC321D2C834D3 /* Pods-SDWebImageProgressiveJPEGDemo.debug.xcconfig */,
+				2EE008FD024A54987AE337AA /* Pods-SDWebImageProgressiveJPEGDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		802C95531FA0E62F0009362F = {
 			isa = PBXGroup;
 			children = (
 				802C955E1FA0E62F0009362F /* SDWebImageProgressiveJPEGDemo */,
 				802C955D1FA0E62F0009362F /* Products */,
+				32BE81B512CEE425885D2852 /* Pods */,
+				FA42D4BFCD6361AFB231687B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = SDWebImageProgressiveJPEGDemo;
 			sourceTree = "<group>";
 		};
+		FA42D4BFCD6361AFB231687B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				336DD5F29A500E03EF20F56C /* Pods_SDWebImageProgressiveJPEGDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 802C956E1FA0E62F0009362F /* Build configuration list for PBXNativeTarget "SDWebImageProgressiveJPEGDemo" */;
 			buildPhases = (
+				C9838BBF7EACC7EC06971A10 /* [CP] Check Pods Manifest.lock */,
 				802C95581FA0E62F0009362F /* Sources */,
 				802C95591FA0E62F0009362F /* Frameworks */,
 				802C955A1FA0E62F0009362F /* Resources */,
+				68CF4CFA712162221B91A707 /* [CP] Embed Pods Frameworks */,
+				D2F7CE186F0F075C2CB37000 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		68CF4CFA712162221B91A707 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9838BBF7EACC7EC06971A10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDWebImageProgressiveJPEGDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2F7CE186F0F075C2CB37000 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		802C95581FA0E62F0009362F /* Sources */ = {
@@ -272,6 +353,7 @@
 		};
 		802C956F1FA0E62F0009362F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17DB5F56D2BFC321D2C834D3 /* Pods-SDWebImageProgressiveJPEGDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +368,7 @@
 		};
 		802C95701FA0E62F0009362F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EE008FD024A54987AE337AA /* Pods-SDWebImageProgressiveJPEGDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

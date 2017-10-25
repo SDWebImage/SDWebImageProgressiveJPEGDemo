@@ -1,0 +1,23 @@
+PODS:
+  - SDWebImage (4.2.0):
+    - SDWebImage/Core (= 4.2.0)
+  - SDWebImage/Core (4.2.0)
+
+DEPENDENCIES:
+  - SDWebImage (from `https://github.com/rs/SDWebImage.git`)
+
+EXTERNAL SOURCES:
+  SDWebImage:
+    :git: https://github.com/rs/SDWebImage.git
+
+CHECKOUT OPTIONS:
+  SDWebImage:
+    :commit: 85cb2fd6ad96aa3d6cf92ecbe10b26181bd05a97
+    :git: https://github.com/rs/SDWebImage.git
+
+SPEC CHECKSUMS:
+  SDWebImage: b1189fd85365c18434270a11a5cad13a1e848d53
+
+PODFILE CHECKSUM: 49086b42165d62917c2db4b29faf107dac75ce0b
+
+COCOAPODS: 1.4.0.beta.2
