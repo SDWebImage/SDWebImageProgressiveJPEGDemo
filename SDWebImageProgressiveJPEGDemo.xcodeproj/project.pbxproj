@@ -12,6 +12,7 @@
 		802C95651FA0E62F0009362F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802C95631FA0E62F0009362F /* Main.storyboard */; };
 		802C95671FA0E62F0009362F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802C95661FA0E62F0009362F /* Assets.xcassets */; };
 		802C956A1FA0E62F0009362F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802C95681FA0E62F0009362F /* LaunchScreen.storyboard */; };
+		802C95731FA0F2A60009362F /* ProgressiveJPEGDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802C95721FA0F2A60009362F /* ProgressiveJPEGDecoder.swift */; };
 		9DD1E374DE903D9E4DFADFB4 /* Pods_SDWebImageProgressiveJPEGDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336DD5F29A500E03EF20F56C /* Pods_SDWebImageProgressiveJPEGDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		802C95661FA0E62F0009362F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		802C95691FA0E62F0009362F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		802C956B1FA0E62F0009362F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		802C95721FA0F2A60009362F /* ProgressiveJPEGDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressiveJPEGDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				802C95661FA0E62F0009362F /* Assets.xcassets */,
 				802C95681FA0E62F0009362F /* LaunchScreen.storyboard */,
 				802C956B1FA0E62F0009362F /* Info.plist */,
+				802C95721FA0F2A60009362F /* ProgressiveJPEGDecoder.swift */,
 			);
 			path = SDWebImageProgressiveJPEGDemo;
 			sourceTree = "<group>";
@@ -166,10 +169,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Concorde/Concorde.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Concorde.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +224,7 @@
 			files = (
 				802C95621FA0E62F0009362F /* ViewController.swift in Sources */,
 				802C95601FA0E62F0009362F /* AppDelegate.swift in Sources */,
+				802C95731FA0F2A60009362F /* ProgressiveJPEGDecoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
