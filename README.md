@@ -10,3 +10,19 @@ Take a look at this example where Concorde is plugged in SDWebImage coders.
 2. Run `pod install`
 3. Stop! Hammertime
 4. Open SDWebImageProgressiveJPEGDemo.xcworkspace, build and run
+
+## Requirements
+
+- iOS 10 or later
+
+## Installation
+
+- TBD
+
+## Author
+
+- [Bogdan Poplauschi](https://github.com/bpoplauschi)
+
+## License
+
+- This project is available under the [MIT license](LICENSE).
