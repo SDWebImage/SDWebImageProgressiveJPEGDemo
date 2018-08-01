@@ -15,15 +15,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SDWebImageCodersManager.sharedInstance().addCoder(ProgressiveJPEGDecoder())
-        
-        // http://www.pooyak.com/p/progjpeg/jpegload.cgi?o=1
-        // this one looks better but has a problem, doesn't return Content-Length
-        // so a check in SDWebImageDownloaderOperation will stop the progressive handling (expectedSize)
-        let url = URL(string: "https://raw.githubusercontent.com/cooperka/test-progressive-jpeg/master/test-face-progressive-optimized.jpg")
-        imageView.sd_setImage(with: url, placeholderImage:nil, options:.progressiveDownload) { (image, error, cacheType, url) in
-            if let image=image, let error=error, let url=url {
-                print(image, error, cacheType, url)
+        SDImageCodersManager.shared.addCoder(ProgressiveJPEGDecoder.shared)
+        SDImageCache.shared.clearDisk {
+            // http://www.pooyak.com/p/progjpeg/jpegload.cgi?o=1
+            // this one looks better but has a problem, doesn't return Content-Length
+            // so a check in SDWebImageDownloaderOperation will stop the progressive handling (expectedSize)
+            let url = URL(string: "https://raw.githubusercontent.com/cooperka/test-progressive-jpeg/master/test-face-progressive-optimized.jpg")
+            self.imageView.sd_setImage(with: url, placeholderImage: nil, options: [.progressiveLoad, .avoidDecodeImage]) { (image, error, cacheType, url) in
+                if let image=image, let error=error, let url=url {
+                    print(image, error, cacheType, url)
+                }
             }
         }
     }

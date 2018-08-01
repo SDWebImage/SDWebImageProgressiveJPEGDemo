@@ -10,12 +10,29 @@ import UIKit
 import SDWebImage
 import Concorde
 
-class ProgressiveJPEGDecoder: NSObject, SDWebImageProgressiveCoder {
-    func canIncrementallyDecode(from data: Data?) -> Bool {
+class ProgressiveJPEGDecoder: NSObject, SDProgressiveImageCoder {
+    static let shared = ProgressiveJPEGDecoder()
+    
+    var data: Data?
+    var finished: Bool = false
+    
+    func canIncrementalDecode(from data: Data?) -> Bool {
         return true
     }
     
-    func incrementallyDecodedImage(with data: Data?, finished: Bool) -> UIImage? {
+    required init(incrementalWithOptions options: [SDImageCoderOption : Any]? = nil) {
+        super.init()
+    }
+    
+    func updateIncrementalData(_ data: Data?, finished: Bool) {
+        if self.finished {
+            return
+        }
+        self.data = data
+        self.finished = finished
+    }
+    
+    func incrementalDecodedImage(options: [SDImageCoderOption : Any]? = nil) -> UIImage? {
         if let data = data {
             if let bufferedImageDecoder = CCBufferedImageDecoder(data: data) {
                 bufferedImageDecoder.decompress()
@@ -29,7 +46,7 @@ class ProgressiveJPEGDecoder: NSObject, SDWebImageProgressiveCoder {
         return true
     }
     
-    func decodedImage(with data: Data?) -> UIImage? {
+    func decodedImage(with data: Data?, options: [SDImageCoderOption : Any]? = nil) -> UIImage? {
         if let data = data {
             if let imageDecoder = CCBufferedImageDecoder(data: data) {
                 imageDecoder.decompress()
@@ -39,15 +56,11 @@ class ProgressiveJPEGDecoder: NSObject, SDWebImageProgressiveCoder {
         return nil
     }
     
-    func decompressedImage(with image: UIImage?, data: AutoreleasingUnsafeMutablePointer<NSData?>, options optionsDict: [String : NSObject]? = nil) -> UIImage? {
-        return image
-    }
-    
     func canEncode(to format: SDImageFormat) -> Bool {
         return false
     }
     
-    func encodedData(with image: UIImage?, format: SDImageFormat) -> Data? {
+    func encodedData(with image: UIImage?, format: SDImageFormat, options: [SDImageCoderOption : Any]? = nil) -> Data? {
         return nil
     }
 }

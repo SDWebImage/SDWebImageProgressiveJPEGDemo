@@ -6,6 +6,6 @@ project 'SDWebImageProgressiveJPEGDemo'
 
 target 'SDWebImageProgressiveJPEGDemo' do
   platform :ios, '10.0'
-  pod 'SDWebImage',  :git => 'https://github.com/rs/SDWebImage.git'
+  pod 'SDWebImage',  '5.0.0-beta'
   pod 'Concorde/Core'
 end

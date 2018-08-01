@@ -1,26 +1,17 @@
 PODS:
   - Concorde/Core (0.2.0)
-  - SDWebImage (4.2.0):
-    - SDWebImage/Core (= 4.2.0)
-  - SDWebImage/Core (4.2.0)
+  - SDWebImage (5.0.0-beta):
+    - SDWebImage/Core (= 5.0.0-beta)
+  - SDWebImage/Core (5.0.0-beta)
 
 DEPENDENCIES:
   - Concorde/Core
-  - SDWebImage (from `https://github.com/rs/SDWebImage.git`)
-
-EXTERNAL SOURCES:
-  SDWebImage:
-    :git: https://github.com/rs/SDWebImage.git
-
-CHECKOUT OPTIONS:
-  SDWebImage:
-    :commit: 292078c0be958f3dc488848e190e8da57c1106b0
-    :git: https://github.com/rs/SDWebImage.git
+  - SDWebImage (= 5.0.0-beta)
 
 SPEC CHECKSUMS:
   Concorde: 7321c727200f4cbccd119249ea491c548065da29
-  SDWebImage: b1189fd85365c18434270a11a5cad13a1e848d53
+  SDWebImage: 55c787b164fabe07f2a4d5307f6e1be7960fb9be
 
-PODFILE CHECKSUM: 202fd9699c242a43bf3e5618d7ec2446396a4686
+PODFILE CHECKSUM: 949b84df921bc04323efa9775d3f8d723c9fe605
 
-COCOAPODS: 1.4.0.beta.2
+COCOAPODS: 1.4.0
