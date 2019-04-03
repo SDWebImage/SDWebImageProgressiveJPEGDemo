@@ -1,12 +1,12 @@
 PODS:
   - Concorde/Core (0.2.0)
-  - SDWebImage (5.0.0-beta):
-    - SDWebImage/Core (= 5.0.0-beta)
-  - SDWebImage/Core (5.0.0-beta)
+  - SDWebImage (5.0.0):
+    - SDWebImage/Core (= 5.0.0)
+  - SDWebImage/Core (5.0.0)
 
 DEPENDENCIES:
   - Concorde/Core
-  - SDWebImage (= 5.0.0-beta)
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -15,8 +15,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Concorde: 7321c727200f4cbccd119249ea491c548065da29
-  SDWebImage: 55c787b164fabe07f2a4d5307f6e1be7960fb9be
+  SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
 
-PODFILE CHECKSUM: 949b84df921bc04323efa9775d3f8d723c9fe605
+PODFILE CHECKSUM: d2c831c95f6d1685412d603b4e8f7bbc4c907e55
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

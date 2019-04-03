@@ -167,7 +167,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Concorde/Concorde.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
@@ -178,7 +178,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDWebImageProgressiveJPEGDemo/Pods-SDWebImageProgressiveJPEGDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C9838BBF7EACC7EC06971A10 /* [CP] Check Pods Manifest.lock */ = {

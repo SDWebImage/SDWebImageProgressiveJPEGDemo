@@ -2,7 +2,7 @@
 
 [![CI Status](http://img.shields.io/travis/SDWebImage/SDWebImageProgressiveJPEGDemo.svg?style=flat)](https://travis-ci.org/SDWebImage/SDWebImageProgressiveJPEGDemo)
 
-The recent refactoring of SDWebImage (4.2.0) allows pluginable coders. 
+The SDWebImage (>= 4.2.0) allows pluginable coders. 
 A good example of using this feature is supporting Progressive JPEG.
 Take a look at this example where Concorde is plugged in SDWebImage coders.
 
@@ -19,7 +19,7 @@ Take a look at this example where Concorde is plugged in SDWebImage coders.
 
 ## Installation
 
-- TBD
+- Run `pod install` under the project root directory.
 
 ## Author
 
